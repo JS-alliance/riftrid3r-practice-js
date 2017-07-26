@@ -4,7 +4,7 @@ var generateBoard = function(width, height, char1, char2) {
     var board = ""; 
     var line1 = function(width, char1, char2){
         var line = "";
-        for(i = 0; i <= width; i++)
+        for(i = 0; i < width; i++)
         if (line.slice(-1) == char1) {
             line += char2;
         } else if (line.slice(-1) != nl){
@@ -15,7 +15,7 @@ var generateBoard = function(width, height, char1, char2) {
     };
     var line2 = function(width, char1, char2){
         var line = "";
-        for(i = 0; i <= width; i++)
+        for(i = 0; i < width; i++)
         if (line.slice(-1) == char2) {
             line += char1;
             
@@ -29,10 +29,10 @@ var generateBoard = function(width, height, char1, char2) {
 
     var slice = line1(width, char1, char2) + line2(width, char1, char2);
 
-    for(i = 0; i <= height/2; i++)
+    for(i = 0; i < height/2; i++)
         board += slice;
 
     return board;
 };
 
-console.log(generateBoard(8,8,"@","#"));
+console.log(generateBoard(10,10,"@","#"));
