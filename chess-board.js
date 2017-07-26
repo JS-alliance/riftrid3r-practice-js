@@ -1,5 +1,5 @@
-var generateBoard = function(w, h, c1, c2) {    
-    var area = h * w;
+var generateBoard = function(width, height, char1, char2) {    
+    var area = height * width;
     var nl   = "\n";
     var board = ""; 
     var line1 = function(width, char1, char2){
@@ -27,12 +27,12 @@ var generateBoard = function(w, h, c1, c2) {
     };
 
 
-    var slice = line1(w, c1, c2) + line2(w, c1, c2);
+    var slice = line1(width, char1, char2) + line2(width, char1, char2);
 
-    for(i = 0; i <= h/2; i++)
+    for(i = 0; i <= height/2; i++)
         board += slice;
 
     return board;
 };
 
-console.log(generateBoard(69,1000,"f","u"));
+console.log(generateBoard(8,8,"@","#"));
